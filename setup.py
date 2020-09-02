@@ -21,7 +21,7 @@ setup(
     ],
     packages=["world"],
     include_package_data=True,
-    install_requires=["pandas"],
+    install_requires=["pandas","lxml"],
     entry_points={
         "console_scripts": [
             "world=world.__main__:main",
