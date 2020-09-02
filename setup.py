@@ -10,7 +10,7 @@ setup(
     description="Give information about different countries",
     long_description=README,
     long_description_content_type="text/markdown",
-    url="https://github.com/PyBites-Open-Source/pybites-tips",
+    url="https://github.com/Mabubakr86/World",
     author="mabubakr",
     author_email="dev.mabubakr@gmail.com",
     license="MIT",

@@ -4,7 +4,7 @@ from world import World
 
 def main():
     parser = argparse.ArgumentParser('Explore The world with us')
-    parser.add_argument('country', help='country to get data [cap,cur,lang]')
+    parser.add_argument('country', help='The country to get data for ')
     parser.add_argument('-o','--options', help='show specific info'
                         '[cap for capital,ur for currency,ang for language]'
                         )

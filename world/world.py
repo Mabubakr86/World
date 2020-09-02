@@ -7,15 +7,18 @@ import difflib
 
 #create world class
 class World:
-    def __init__(self, src):
-        self.data = self._get_data(src)
+    url = 'https://www.worldclasslearning.com/general-knowledge/list-countries-capital-currencies-languages.html' 
+    def __init__(self):
+        self.data = World._get_data_from_url()
 
-    def _get_data(self, src):
+    @classmethod
+    def _get_data_from_url(cls):
         try:
-            data_df = pd.read_excel(src)
-            columns = data_df.columns.tolist()[1:] 
+            tables = pd.read_html(cls.url, header=0)
+            world_df = tables[0]
+            columns = world_df.columns.tolist() 
             assert len(columns)==4, 'columns in source file do not fit'
-            countries, capitals, currencies, langs = [data_df[col].to_list() 
+            countries, capitals, currencies, langs = [world_df[col].to_list() 
                                                       for col in columns]
             zipped_data = zip(countries,capitals,currencies,langs)
             mapped_data = {item[0].lower():item[1:] for item in zipped_data}
@@ -64,7 +67,7 @@ class World:
 
 
 if __name__ == '__main__':
-    world = World(src='world.xlsx')
+    world = World()
     country_data = world.get_country_data(input('Serach Countries For: '))
     world.print_country_data(country_data, verbose='all')
 
