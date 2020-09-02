@@ -3,6 +3,7 @@ Command line interface (CLI)to get main information of countries
 
 
 # Installation 
+pip install git+https://github.com/Mabubakr86/World
 
 
 # Usage
