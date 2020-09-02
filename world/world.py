@@ -39,19 +39,21 @@ class World:
         return country
 
     def print_country_data(self,country_data, verbose='all'):
-        options = [
-                    f"\nThe capital of {country_data['country']} >>>> {country_data['capital']}\n",
-                    f"\nThe currency of {country_data['country']} >>>> {country_data['currency']}\n",
-                    f"\nThe language of {country_data['country']} >>>> {country_data['language']}\n"
-                    ]
-        if verbose == 'all':
-            print(''.join(options))
-        elif verbose == 'capital':
-            print(options[0])
-        elif verbose == 'currency':
-            print(options[1])
-        elif verbose == 'language':
-            print(options[2])
+        if country_data:
+            options = [
+                        f"\nThe capital of {country_data['country']} >>>> {country_data['capital']}\n",
+                        f"\nThe currency of {country_data['country']} >>>> {country_data['currency']}\n",
+                        f"\nThe language of {country_data['country']} >>>> {country_data['language']}\n"
+                        ]
+            if verbose == 'all':
+                print(''.join(options))
+            elif verbose == 'capital':
+                print(options[0])
+            elif verbose == 'currency':
+                print(options[1])
+            elif verbose == 'language':
+                print(options[2])
+         print("Sorry!! not found")
 
     def get_country_data(self, country):
         country = self._check_country(country)
