@@ -53,7 +53,6 @@ class World:
                 print(options[1])
             elif verbose == 'language':
                 print(options[2])
-        print("Sorry!! not found")
 
     def get_country_data(self, country):
         country = self._check_country(country)
