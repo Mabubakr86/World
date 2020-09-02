@@ -10,7 +10,7 @@ def main():
                         )
     args = parser.parse_args()
 
-    world = World(src='world.xlsx')
+    world = World()
     country_data = world.get_country_data(args.country)
     if args.options == 'cap':
         world.print_country_data(country_data, verbose='capital')
