@@ -24,7 +24,7 @@ setup(
     install_requires=["pandas"],
     entry_points={
         "console_scripts": [
-            "world=wold.__main__:main",
+            "world=world.__main__:main",
         ]
     },
 )
