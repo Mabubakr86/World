@@ -3,14 +3,17 @@ Command line interface (CLI)to get main information of countries
 
 
 # Installation 
+install latest version of githu repository
+'''
 pip install git+https://github.com/Mabubakr86/World
+'''
 
 
 # Usage
 on command line type:
-world [country_name] 
+'''world [country_name]'''
 
 to use options:(say you want only capital of country)
 on command line type:
-world [country_name]  -o cap
+'''world [country_name]  -o cap'''
  
